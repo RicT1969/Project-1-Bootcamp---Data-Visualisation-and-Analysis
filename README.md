@@ -70,7 +70,7 @@ After cleaning the data from the department into a  more manageable data set, we
         H1: Significant Increase in forecasted Population growth
         t-statistic: -2.096759
         p-value: 0.0376077
-        Failed reject H0 as the p-value is <= .05
+        Reject H0 as the p-value is <= .05
         
 Conclusion of section 3: Based on the three different data sets we have sighted a significant increase in median wait time across Victorian hospitals emergency departments conducted through T-Test Hypothesis testing. In order to display a link between population growth to this issue we performed a second set of tests on the population data sets where the 2002 vs 2021 analysis indicated a significant change in median. However when comparing 2016 and 2021 we failed to make the same conclusion. For this reason we ventured into a projections path to look at the estimated population figures for the LGA's where we sighted a significant increase in population between 2016 and 2036. 
 
