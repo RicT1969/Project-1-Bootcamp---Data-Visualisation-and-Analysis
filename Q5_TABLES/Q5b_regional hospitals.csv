@@ -1,0 +1,5 @@
+Hospital name,Local Hospital Network,Address Line 1,Remoteness area,Number of available beds,Peer group name,Supplied Emergency department data,Supplied Elective Surgery Waiting times data,Supplied Elective Surgery Waiting times data,LGA
+Ballarat Health Services [Base Campus],Ballarat Health Services,1      Dummond                                       St,Inner Regional,266.5,Public acute group A,Yes,Yes,Yes,Ballarat
+"Bendigo Hospital, The",Bendigo Health Care Group,62     Lucan                                         St,Inner Regional,395.5,Public acute group A,Yes,Yes,Yes,Bendigo
+Latrobe Regional Hospital [Traralgon],Latrobe Regional Hospital,10     Village                                       Ave,Inner Regional,253.2,Public acute group A,Yes,Yes,Yes,Baw Baw
+West Gippsland Healthcare Group [Warragu,West Gippsland Healthcare Group,41     Landsborough                                  St,Inner Regional,90,Public acute group B,Yes,Yes,Yes,Baw Baw
