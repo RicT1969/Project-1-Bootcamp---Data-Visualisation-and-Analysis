@@ -9,7 +9,7 @@ Exploring and identifying potential healthcare holes in Victoria
 This project investigates the relationship between the growing Victorian population and the various health services available to its people. Access to tertiary and primary healthcare facilities are considered and corresponding health outcomes and mortality rates are explored. 
 The focus of this project is Victoria, Australia and the datasets analysed are from the years 2016 - 2022. Major sources of the datasets are the Australian Bureau of Statistics (ABS) and the Australian Institute of Health and Welfare (AIHW). Additionally, GeoAPIfy is used for querying geo-coordinates of the various hospitals and Local Government Areas (LAGs) for the analysis.
 
-# GitHub (Jalaj Sharma)
+# GitHub:
 https://github.com/j13s3/Group3_Project1_DataAnalytics
 
 # Research Question 1 (Shelly Wong):
