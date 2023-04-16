@@ -7,7 +7,7 @@ Exploring and identifying potential healthcare holes in Victoria
 
 # Project Description:
 This project investigates the relationship between the growing Victorian population and the various health services available to its people. Access to tertiary and primary healthcare facilities are considered and corresponding health outcomes and mortality rates are explored. 
-The focus of this project is Victoria, Australia and the datasets analysed are from the years 2016 - 2022. Major sources of the datasets are the Australian Bureau of Statistics (ABS) and the Australian Institue of Health and Welfare (AIHW). Additionally, GeoAPIfy is used for querying geo-cordinates of the various hospitals and Local Government Areas (LAGs) for the analysis.
+The focus of this project is Victoria, Australia and the datasets analysed are from the years 2016 - 2022. Major sources of the datasets are the Australian Bureau of Statistics (ABS) and the Australian Institute of Health and Welfare (AIHW). Additionally, GeoAPIfy is used for querying geo-coordinates of the various hospitals and Local Government Areas (LAGs) for the analysis.
 
 # Research Question 1 (Shelly Wong):
 Identify areas of population growth in Victoria and understand the health services available to the areas
@@ -15,7 +15,7 @@ Identify areas of population growth in Victoria and understand the health servic
 Please add your data analysis here which contains "ample and complete" information. This is a requirement of GitHub.
 
 # Research Question 2 (Richard Thornton):
-Determine the the available health services in Victoria - tertiary hospitals and primary healthcare services providers (general practicioners and pharmacies)
+Determine the available health services in Victoria - tertiary hospitals and primary healthcare services providers (general practitioners and pharmacies)
 
 Please add your data analysis here which contains "ample and complete" information. This is a requirement of GitHub.
 
@@ -58,20 +58,20 @@ PLEASE NOTE: 2020 is the year of the Covid-19 pandemic and various stringent saf
 The Covid-19 pandemic would explain why there are lesser reporting units active in 2020.
 
 Step 4:
-Find the latitude and longitude data (geo-coordinates) for the LGAs of interest for the mortaility rates analysis.
-Geoapify is used to query JSON messages and the geo-data is updated into the dataframe.
-Furthermore, with the assumption that the number of hospital services is the same over the years of interest, use Geoapify again to determine the number of hospitals active within 25km of the LGAs and their council areas. This data (hosiptals in close proximity (<25km) to Victorian LGAs) then can be applied to all the years of interest for determining the relationship between age-standardised deaths (per 100,000) and access to hospitals.
+Find the latitude and longitude data (geo-coordinates) for the LGAs of interest for the mortality rates analysis.
+GeoAPIfy is used to query JSON messages and the geo-data is updated into the data frame.
+Furthermore, with the assumption that the number of hospital services is the same over the years of interest, use GeoAPIfy again to determine the number of hospitals active within 25km of the LGAs and their council areas. This data (hospitals in close proximity (<25km) to Victorian LGAs) then can be applied to all the years of interest for determining the relationship between age-standardised deaths (per 100,000) and access to hospitals.
 
 Step 5:
 Create a boxplot of the age-standardised deaths (per 100,000) across the years to compare the distributions. From the box plot, it can be observed that:
     1. All box plots are within the 450-650 adult deaths (per 100,000) range suggesting some consistency in the data, especially the medians being within 500-600.
-    2. There are outliers and the box spread is differently across the years meaning the data is not exactly the same, although there are similarities. This is expected becuase factors change with time.
+    2. There are outliers and the box spread is differently across the years meaning the data is not exactly the same, although there are similarities. This is expected because factors change with time.
     3. There isn't any high degree of skewness in the data
     4. As the box plot are not vastly different, the data is comparable with one another.
 
 Step 6:
-With all the data collected and prepared, we can now do some analysis with the adults deaths per 100,000 and access to hospitals.
-For the year 2016, we can calulate the correlation between hospitals in close proximity (<25km) to LGAs vs. age-standardised deaths (per 100,000). This quantifies the relationship.
+With all the data collected and prepared, we can now do some analysis with the adults’ deaths per 100,000 and access to hospitals.
+For the year 2016, we can calculate the correlation between hospitals in close proximity (<25km) to LGAs vs. age-standardised deaths (per 100,000). This quantifies the relationship.
 Furthermore, a scatter plot can be created to qualitatively assess the relationship between the two variables of interest.
 It can be seen from the correlation value for 2016, that there is an inverse relationship between hospitals in close proximity (<25km) to LGAs vs. age-standardised deaths (per 100,000), as denoted by the negative value. The value of about -0.61 shows that the inverse relationship is prevalent.
 Similarly, looking at the scatter plot labelled "2016 Adult Deaths vs. Hospitals in Close Proximity (<25km)", the age-standardised deaths (per 100,000) is typically 500 or more. But as the number of hospitals within 25km increases to beyond 90, there is a shift in the deaths (per 100,000) to less than 500.
@@ -92,7 +92,7 @@ Step 7:
 Plot a bar graph to visually show the correlation between hospitals in close proximity (<25km) to LGAs vs. age-standardised deaths (per 100,000) for the years of interest. This will illustrate the relationship between the variables being investigated over the years. Finally, an average correlation can be computed to conclude the relationship based on the data over the years.
 
 Conclusion of Research Question 4:
-With the correlations calculated/plotted for the relationship between hospitals in close proximity (<25km) to LGAs vs. age-standardised deaths (per 100,000), yearly (2016 - 2020) and the average across those years, it can be concluded with a high degree of certainty that an inverse realtionship exists. In other words, as the number of hospitals in close access increases, the number of deaths in the population (per 100,000) decreases.
+With the correlations calculated/plotted for the relationship between hospitals in close proximity (<25km) to LGAs vs. age-standardised deaths (per 100,000), yearly (2016 - 2020) and the average across those years, it can be concluded with a high degree of certainty that an inverse relationship exists. In other words, as the number of hospitals in close access increases, the number of deaths in the population (per 100,000) decreases.
 
 # Research Question 5 (Shelly Wong, Shrushti Shah):
 Identify the areas where healthcare services are lacking and therefore a need for healthcare services exists, especially for population dense Victorians in the >70 years old age bracket
@@ -101,4 +101,4 @@ Please add your data analysis here which contains "ample and complete" informati
 
 # Conclusion and Recommendations (Shrushti Shah):
 
-Please add the overall conlusion and future recommendations here.
+Please add the overall conclusion and future recommendations here.
