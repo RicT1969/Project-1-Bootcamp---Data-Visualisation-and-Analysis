@@ -23,9 +23,48 @@ Determine the available health services in Victoria - tertiary hospitals and pri
 Please add your data analysis here which contains "ample and complete" information. This is a requirement of GitHub.
 
 # Research Question 3 (Pedro Azpurua):
-Compare patient wait times at hospitals and the population growth. Furthermore, perform hypothesis testing on the datasets to support any findings
+Compare patient wait times at hospitals and evaluate trends in the population growth. Furthermore, perform hypothesis testing on the datasets to support any findings
+Data Sources: 
+Time Spent in emergency rooms by hospital: https://www.aihw.gov.au/reports-data/myhospitals/sectors/emergency-department-care
+Population grouth by the ABS: https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/sep-2022
+Victoria Population Forecast from DEWLP: https://www.planning.vic.gov.au/land-use-and-population-research/victoria-in-future#:~:text=Victoria%20in%20Future%202019&text=VIF2019%20shows%20Victoria%20remains%20the,reach%2011.2%20million%20by%202056.
 
-Please add your data analysis here which contains "ample and complete" information. This is a requirement of GitHub.
+Step 1: Using the data from the Department of Health, we have cleaned and analysed the figures into a presentable format displaying the average time spent by patients across Victorian hospitals between 2011 and 2021 in the emergency departments.  
+This data was plotted and used as the foundation for the hypothesis testing where by analysing the average growth of wait time across years, we have noted a significant increase based on t-statistics. 
+    Results for Hypothesis test 1: Comparing average wait time at Victorian hospitals between 2016 and 2021. 
+        H0: No significant Increase Between Median Weight Times
+        H1: Significant Increase between Median Weight Times
+        t-statistic: -4.93344
+        p-value: 4.829e-06 
+    The results above display a significant increase in median weight times across the hospitals in Victoria between 2016 and 2021 thus allowing for the rejection of the Null Hypothesis (H0) as the p-value <= .05
+    This results are also backed by a series of Data visualisations including:
+        - a trend line for the average wait time across the Victorian hospitals. 
+        - a range of box plots showcasing an increase in median weight times 
+        - a trend line for the yearly average time spent in hospitals cross hospitals. 
+Step 2: Using the ABS Data we began to test for trends in population growth between the analysed years of 2016 and 2021. 
+This analysis indicated that there was NOT a significant increase in population between the sample years as the p value far exceeds 0.05. We continued to run this test from the start of the data set in 2001 and we noted a significant increase in population from the year 2002 and 2021 with a p-value of .045. This results in conjunction with recent macro condition in Australia due to Covid, made the team focus into a projected forecast approach searching for insights into future population growth. 
+    Results for Hypothesis test 2 part 1: Comparing population growth between 2016 and 2021 in Victorian LGA's
+        H0: No significant Increase in Population growth
+        H1: Significant Increase in Population growth
+        t-statistic: -0.3896897
+        p-value: 0.6972907
+        Failed to reject H0 as the p-value is >= .05
+    
+    Results for Hypothesis test 2 part 2: Comparing population growth between 2002 and 2021 in Victorian LGA's
+        H0: No significant Increase in Population growth
+        H1: Significant Increase in Population growth
+        t-statistic: -2.01660
+        p-value: 0.045431
+        Failed reject H0 as the p-value is <= .05
+Step 3: Using the DELWP Data we began to test for trends in population growth based on population forecasts between 2016 and 2036. 
+After cleaning the data from the department into a  more manageable data set, we found a significant expected growth in Victorian LGA's based om the  2016 figures and the projected dataset. 
+    Results for Hypothesis test 3 part: Comparing population projected growth between 2016 and 2036 in Victorian LGA's
+        H0: No significant Increase in forecasted Population growth
+        H1: Significant Increase in forecasted Population growth
+        t-statistic: -2.096759
+        p-value: 0.0376077
+        Failed reject H0 as the p-value is <= .05
+Conclusion of section 3: Based on the three different data sets we have sighted a significant increase in median wait time across Victorian hospitals emergency departments conducted through T-Test Hypothesis testing. In order to display a link between population growth to this issue we performed a second set of tests on the population data sets where the 2002 vs 2021 analysis indicated a significant change in median. However when comparing 2016 and 2021 we failed to make the same conclusion. For this reason we ventured into a projections path to look at the estimated population figures for the LGA's where we sighted a significant increase in population between 2016 and 2036. 
 
 # Research Question 4 (Jalaj Sharma):
 Compare the mortality rate (age-standardised adult deaths per 100,000) and access to hospitals of the LGAs in Victoria
