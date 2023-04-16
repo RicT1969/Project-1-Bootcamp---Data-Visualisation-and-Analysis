@@ -15,7 +15,41 @@ https://github.com/j13s3/Group3_Project1_DataAnalytics
 # Research Question 1 (Shelly Wong):
 Identify areas of population growth in Victoria and understand the health services available to the areas
 
-Please add your data analysis here which contains "ample and complete" information. This is a requirement of GitHub.
+Data Sources:
+Regional population 2021 from abs
+
+References:
+https://www.shanelynn.ie/pandas-drop-delete-dataframe-rows-columns/
+https://www.statology.org/pandas-set-first-row-as-header/
+https://www.geeksforgeeks.org/plotting-multiple-bar-charts-using-matplotlib-in-python/
+https://www.statology.org/valueerror-cannot-convert-float-nan-to-integer/
+https://www.geeksforgeeks.org/bar-plot-in-matplotlib/
+
+    Step 1:
+
+     - Process raw data, by getting rid of all unwanted information, and select population data from only 2016 to 2021.
+     - Then, calculating the growth of population within these 5 years by subtracting population 2021 to 2016.
+     - The data is then sorted according to the biggest growth cities (in terms of local government area (LGA)) to the lowest growth cities.
+     - In our study, we will only be looking for the Top 14th most growing cities in the whole Victoria. This is to ensure melbourne suburbs, metropolitan CBD, and regional areas are mostly included in the studies.
+
+    Step 2:
+
+     - Bar plot is then used to depict the growth of population in 2 different years (2016 and 2021) in this 14th cities.
+     - Geoview map is also used to depict the location of the cities and its growth in terms of the size of the points on the map. 
+
+    Step 3:
+     - After narrowing the cities data, next is to search for nearest health facilities in the proximity.
+     - Using Geoapify method to identify nearest hospitals and pharmacies in the research LGAs. 
+
+    Step 4:
+     - Obtaining the health facilities distance from JSON format file from geoapify, horizontal bar plot is then used to depict how far is the nearest hospital and pharmacy for each cities. 
+     - Similarly, geoview map is also used to illustrate how far apart are the hospital and pharmacy from each given cities location to each other.
+
+    Step 5:
+     - From all these generated and tables, it is obvious that study needs to be done on 2 cities which are Baw Baw and Whittlesea that have shown no available of hospitals at nearby location. 
+     - Cities such as Mitchell, Hume and Cardinia that takes longer to reach nearest hospitals would also be considered
+     - Top 4 most populated cities would also be further explored to ensure they are capable to adapt to the increasing population growth.
+ 
 
 # Research Question 2 (Richard Thornton):
 Determine the available health services in Victoria - tertiary hospitals and primary healthcare services providers (general practitioners and pharmacies)
@@ -145,9 +179,86 @@ Conclusion of Research Question 4:
 With the correlations calculated/plotted for the relationship between hospitals in close proximity (<25km) to LGAs vs. age-standardised deaths (per 100,000), yearly (2016 - 2020) and the average across those years, it can be concluded with a high degree of certainty that an inverse relationship exists. In other words, as the number of hospitals in close access increases, the number of deaths in the population (per 100,000) decreases.
 
 # Research Question 5 (Shelly Wong, Shrushti Shah):
-Identify the areas where healthcare services are lacking and therefore a need for healthcare services exists, especially for population dense Victorians in the >70 years old age bracket
+Identify the areas where healthcare services are lacking and therefore a need for healthcare services exists, especially for population 
+dense Victorians family growing population looking at the age 0 to 4 years old, and services needed aged group above 70 years old age.
 
-Please add your data analysis here which contains "ample and complete" information. This is a requirement of GitHub.
+Source:
+MyHospitals mapping details: https://www.aihw.gov.au/reports-data/myhospitals/content/data-downloads
+Victoria in Future: https://discover.data.vic.gov.au/dataset/vif2019-population-5yr-ages-vifsa-lga-2036/resource/de6fc077-f0c6-46b8-a6cb-66a911eb06aa
+Hospital resources 2020–21 data tables: https://www.aihw.gov.au/reports-data/myhospitals/content/data-downloads?search=%7B%22SearchTerm%22:%222020%22,%22Subtopics%22:%5B%222%22%5D,%22ShowRelatedTopics%22:false%7D
+
+References:
+https://berkeley-stat159-f17.github.io/stat159-f17/lectures/10-matplotlib_beyond_basics/image_tutorial..html
+
+This Question is divided into 3 sections:
+
+Question 5a: 
+
+    Identify aged group population for 0-4 years old and above 70 years old population across top 14th growing LGAs.
+
+    Step 1: Process raw data, and only select aged group 0-4 years old, and all aged group above 70s for the respective 14th LGAs (defined in Q1)
+
+    Step 2:Finding percentages of these population so we can compare across each LGAs which city has the most proportion of these aged groups.
+
+    Step 3:Generate a bar graph that shows 2 series of column across 14 LGAs that has the percentage amount for children (aged group 0-4 years old) with the elderly group. 
+
+    Step 4: From bar graph, select top cities that has the most elderly proportions which are Bass coast and Mornington Peninsula, and also city that has the most younger children which is Wyndham.
+
+Question 5b:
+
+Identify Hospital size by considering their hospital beds
+
+    References for hospital size vs beds definition(city): https://www.rasmussen.edu/degrees/health-sciences/blog/types-of-hospitals/
+
+     - Small hospitals: fewer than 100 beds
+     - Medium hospitals: between 100 to 499 beds
+     - Large hospitals:  500 or more beds
+
+    References for hospital size vs beds definition(rural)
+     - Hospitals size smaller, often less than 100 beds
+
+     Step 1: Incooperate with hospital mapping data (process in Q5c), using geoview map to identify each studied LGA of their nearest and nearby hospitals.
+
+     Step2: Select the name of the main hospital of each LGAs from geoview map, manually filter the name of the hospital into the data and create new dataframe. 
+
+     Step 3: In combination with the use of Google map to identify travel time needed for further analysis. 
+     
+     Step 4: Categorised hospitals by regional and major cities into 2 different dataframe for further analysis. 
+
+ Question 5c: 
+ 
+     Combine all data and make final analysis.
+
+     Step 1: Process raw data of the hospital mapping. This data has all the public hospitals in whole Australia, only select Victoria.
+
+     Step 2: Using the provided geocoordinates given, plot data using hvplot to identify hospitals location across victoria map. 
+
+     Step 3: Import data from Q5a (aged group bar graph), and Q5b(hospital beds dataframe), combine all these dats to be used into analysis
+
+     Step 4 :LGA studied derived from analysis in Q1 and Q5a
+      - Cities with no hospital found: BawBaw and Whittlesea
+      - Cities with aged groups concern: Bass Coast, Mornington, and Wyndham
+      - Cities with longest hospital distance to reach: Mitchell, Hume and Cardinia 
+      - Top populated cities: Casey, Melton
+
+     Step 5: Analysis made
+
+     City with no concern for health facilites: 
+
+      - Baw Baw and Whittlesea both have geocoordinates error that do not depicts its location with respect to the population area. Geocoordinates given were in area of nature reserve. Hence, studies were analysed to find out where population located. Hospitals at reasonably medium sized 90 and 253 respectively at 2 most popolated towns in BawBaw are well equipped and adequate for its own population. Same for Whittlesea, its population mostly located at south where main hospital located with 461 beds (medium to large sized) is also adequate for its population. 
+
+       - Both Bass Coast and Mornington have good number of hospitals around, well equipped large hospital also located at its main populated area. Hence, these LGAs have no major issues to handle elderly population. 
+
+     City with growing concerns for health facilities: 
+
+       - Wyndham is a growing family oriented city, but it has only 1 medium sized hospital in the municipality. This is a huge concern for growing population. 
+
+       - Similar for Casey and Cardinia, being top growing cities, they are both sharing same hospital, at only 233 beds capacity. 
+
+       - Same for Hume and Melton, being top growing cities, they do not have nearby hospitals that could treat major treatments. Both have to travel around 25mins to access bigger hospital at capacity of 575 beds and has to share facility within Western Health regions. 
+
+       - As for Mitchell, even though is a small population compared to other LGAs, it does not have a small sized hospital within region, and even have to travel 20mins to access for a basic treatment. 
+
 
 # Conclusion and Recommendations (Shrushti Shah):
 
