@@ -52,9 +52,27 @@ https://www.geeksforgeeks.org/bar-plot-in-matplotlib/
  
 
 # Research Question 2 (Richard Thornton):
-Determine the available health services in Victoria - tertiary hospitals and primary healthcare services providers (general practitioners and pharmacies)
+<p>Determine the available health services in Victoria - tertiary hospitals and primary healthcare services providers (general practitioners and pharmacies)</p><ul>
+<li>General Practice Workforce providing Primary Care services in Australia Information, Dept of Health and Aged Care (Australian Federal Government):
+https://hwd.health.gov.au/resources/data/dataset-gp-financial-years-201516-to-202122.xlsx</li>
+<li>Medicare Benefits Schedule GP and specialist attendances and expenditure 2010-11 to 2016–17 Medicare Benefits Schedule (MBS) data collection, Australian Institue for Health and Welfare: https://www.aihw.gov.au/reports-data/health-welfare-overview/health-welfare-expenditure/data</li>
+<li>Population grouth (Estimated Resident Population) by the ABS: https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/sep-2022</li>
+<li>MyHospitals mapping details: https://www.aihw.gov.au/reports-data/myhospitals/content/data-downloads</li></ul></p>
 
-Please add your data analysis here which contains "ample and complete" information. This is a requirement of GitHub.
+<p>Step 1: Processing data and cleaning.<p><ul>
+<li> All data provided in excel workbooks and imported into Pandas Dataframes using Jupyter Notebook. Excel formats had n/a values, mulitple sheets and empty columns and rows.</li></ul></p>
+
+<p>Step 2: Data exploration and analysis</p><ul>
+<li>The data from the Dept of Health and Aged Care was based on remote area categories using the remote Monash Model, based on the ABS remoteness classification, which divides all of Australia into a number of catagories (Metropolitan areas, Regional centres, Large rural towns, Medium Rural Towns, Remote Communities, Very remote Communities). It was envisaged that this cold form the basis of exploration on how primary health care is affected by population growth and by remoteness. The data for Victoria was mapped, to identify the remoteness zones used with geogrphical area; however, geographically the data could not be broken down into constituent parts. The data was explored and graphed, but could not be compared with the datasets being analysed by the rest of the group, and did not readily provide data that could be meaningfully tested within the hypothesis.</li>
+<li>Medicare data was explored, obtained from the Australian Institute of Health and Welfare. details medicare costs claimed by GPs in relation to patient attendances. This dataset has the advantage of being published by SA3 and by LGA. It is, however, out of date, with the latest detailed data being 2016/17. Itr was concluded that the data did not provide suffieint detail to be able to produce any statistically verifiable support for the hypothesis, simply because there are too many gaps in the data.</li></p></ul>
+
+<p>Step 3:</p><ul>
+<li>Mapping hospitals and pharmacies to areas of population growth. The map and analysis ofdistance to services was undertaken by Shelly Wong and her methodology is dealt with in Setion 5.</li></ul></p>
+
+<p>Conclusions for Question 2:</p><ul>
+<li>Pharamcies do not give any evidence that there are insufficent numbers in areas of growth.</li><li>GPs as the primary healthcare providers are the first point of call for most patients, but data sources publically are problematic, at small geographic areas, and are inconsistent in terms of date and collection.<li></li>Whilst there are figures showing the number of full time equivalent GPs per 100,000 population over time; however, whether the increase in numbers is of a level to ensure sufficient access and care to areas with increasing populations cannot be demonstrated as the data cannot be broken down into those areas. </li><li>Whilst the number of visits per patient has increased, without being able to correlate this to number of GPs (full time equivalent) and to smaller geographic areas, it is not possible to draw conclusions as to whether there are any increasing gaps in areas of population growth.</li></ul></p>
+
+
 
 # Research Question 3 (Pedro Azpurua):
 Compare patient wait times at hospitals and evaluate trends in the population growth. Furthermore, perform hypothesis testing on the datasets to support any findings
