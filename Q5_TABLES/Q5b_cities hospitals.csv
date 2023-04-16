@@ -1,0 +1,12 @@
+Hospital name,Local Hospital Network,Address Line 1,Remoteness area,Number of available beds,Peer group name,Supplied Emergency department data,Supplied Elective Surgery Waiting times data,Supplied Elective Surgery Waiting times data,LGA
+Box Hill Hospital,Eastern Health (Vic),51     Nelson                                        Rd,Major Cities,523,Public acute group A,Yes,Yes,Yes,Bass Coast
+Casey Hospital,Monash Health,52     Kangan                                        Dr,Major Cities,233.5,Public acute group B,Yes,Yes,Yes,Casey/Cardinia
+Frankston Hospital,Peninsula Health (Vic),2      Hastings                                      Rd,Major Cities,452.1,Public acute group A,Yes,Yes,Yes,Mornington
+Geelong Hospital,Barwon Health,Bellerine                                     St,Major Cities,497.2,Principal referral,Yes,Yes,Yes,Geelong
+Melton Health,Djerriwarrh Health Service (Vic),195    Barries                                       Rd,Major Cities,17,Unpeered,No,No,No,Melton
+Mercy Public Hospitals Inc [Werribee],Mercy Public Hospital Inc. (Vic),300    Princes                                       Hwy,Major Cities,238.3,Public acute group B,Yes,Yes,Yes,Wyndham
+"Northern Hospital, The [Epping]",Northern Health (Vic),185    Cooper                                        St,Major Cities,461.8,Public acute group A,Yes,Yes,Yes,Whittlesea
+Royal Melbourne Hospital - City Campus,Melbourne Health,300    Grattan                                       St,Major Cities,699.3,Principal referral,Yes,Yes,Yes,Melbourne
+Sunbury Day Hospital,Western Health (Vic),7      Macedon                                       St,Major Cities,27,Other day procedure hospital,No,No,No,Hume
+Sunshine Hospital,Western Health (Vic),176    Furlong                                       Rd,Major Cities,575.7,Public acute group B,Yes,Yes,Yes,Hume
+Wantirna Health,Eastern Health (Vic),251    Mountain                                      Hwy,Major Cities,61.9,Mixed subacute and non-acute,No,No,No,Bass Coast
