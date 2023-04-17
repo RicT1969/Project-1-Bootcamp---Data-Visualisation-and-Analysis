@@ -296,4 +296,14 @@ Identify Hospital size by considering their hospital beds
 
 # Conclusion and Recommendations (Shrushti Shah):
 
-Please add the overall conclusion and future recommendations here.
+Based on the data sets analysed, we have the following conclusions:
+
+        There is an increase in population in Victoria.
+
+        There is evidence to show as the population increases there are longer hospital wait times, and an increase in GP health services required. 
+
+        The greatest growth in Victoria is located in the outer ring suburbs of Melbourne.
+
+        There is evidence that the mortality rate has a negative correlation to access to a hospital. 
+
+        Evidence that four of the top growth LGAs require resources as seen in the number of hospital beds available in these areas. 
