@@ -1,5 +1,6 @@
 # Group3_Project1_DataAnalytics
 Data Analytics Bootcamp - Project 1 - Group 3
+
 Group Members: Jalaj Sharma, Pedro Azpurua, Richard Thornton, Shelly Wong, Shrushti Shah
 
 # Project Title:
@@ -236,10 +237,11 @@ Conclusion of Research Question 4:
 Identify the areas where healthcare services are lacking and therefore a need for healthcare services exists.
 
 Jupyter Notebooks:
-    Q5a_aged populated.ipynb
-    Q5b_Hospital beds.ipynb
-    Q5c_Hospital mapping and analysis.ipynb
-    Q5d_BawBaw and Whittlesea analysis.ipynb
+
+     Q5a_aged populated.ipynb
+     Q5b_Hospital beds.ipynb
+     Q5c_Hospital mapping and analysis.ipynb
+     Q5d_BawBaw and Whittlesea analysis.ipynb
 
 Few considerations to made:
      - Considering 2 types of aged groups that need hospitals the most, this is the growing family population looking at the from age 0 to 4 years old, and services needed aged group above 70 years old age.
