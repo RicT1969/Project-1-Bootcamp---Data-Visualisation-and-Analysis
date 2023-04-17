@@ -23,6 +23,8 @@ https://github.com/j13s3/Group3_Project1_DataAnalytics
 # Research Question 1 (Shelly Wong):
 Identify areas of population growth in Victoria and understand the health services available to the areas
 
+Jupyter Notebook: Q1_Population_health.ipnyb
+
 Data Sources:
 Population growth data 2021 from ABS
 
@@ -61,6 +63,9 @@ https://www.geeksforgeeks.org/bar-plot-in-matplotlib/
  
 
 # Research Question 2 (Richard Thornton):
+
+Jupyter Notebook: Q2_GP_Analysis.ipynb
+
 <p>Determine the available health services in Victoria - tertiary hospitals and primary healthcare services providers (general practitioners and pharmacies)</p><ul>
 <li>General Practice Workforce providing Primary Care services in Australia Information, Dept of Health and Aged Care (Australian Federal Government):
 https://hwd.health.gov.au/resources/data/dataset-gp-financial-years-201516-to-202122.xlsx</li>
@@ -81,10 +86,12 @@ https://hwd.health.gov.au/resources/data/dataset-gp-financial-years-201516-to-20
 <p>Conclusions for Question 2:</p><ul>
 <li>Pharmacies proved numerous and proximate to areas of interest and were dismissed as areas of concern</li><li>GPs as the primary healthcare providers are the first point of call for most patients, but assessing whether the accessibility to GPs lags behind population growht in areas of change is highly problematic. The publically data sources availble dataets available at small geographic areas are inconsistent in terms of time series and collection.<l/i><li>Whilst there are figures showing the number of full time equivalent GPs per 100,000 population over time, the question as to whether  the increase in numbers is of a level to ensure sufficient access and care to areas with increasing populations cannot be demonstrated because the data cannot be broken down into comparable areas. </li><li>Whilst the number of visits per patient has increased, without being able to correlate this to number of GPs (full time equivalent) and to smaller geographic areas, it is has not proved possible to draw statistically relevant conclusions as to whether there are any increasing gaps in areas of population growth.</li></ul></p>
 
-
-
 # Research Question 3 (Pedro Azpurua):
+
 Compare patient wait times at hospitals and evaluate trends in the population growth. Furthermore, perform hypothesis testing on the datasets to support any findings
+
+Jupyter Notebook: Q3_Wait_Time.ipnyb
+
 Data Sources: 
 Time Spent in emergency rooms by hospital: https://www.aihw.gov.au/reports-data/myhospitals/sectors/emergency-department-care
 Population grouth by the ABS: https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/sep-2022
@@ -136,7 +143,10 @@ After cleaning the data from the department into a  more manageable data set, we
 Conclusion of section 3: Based on the three different data sets we have sighted a significant increase in median wait time across Victorian hospitals emergency departments conducted through T-Test Hypothesis testing. In order to display a link between population growth to this issue we performed a second set of tests on the population data sets where the 2002 vs 2021 analysis indicated a significant change in median. However when comparing 2016 and 2021 we failed to make the same conclusion. For this reason we ventured into a projections path to look at the estimated population figures for the LGA's where we sighted a significant increase in population between 2016 and 2036. 
 
 # Research Question 4 (Jalaj Sharma):
+
 Compare the mortality rate (age-standardised adult deaths per 100,000) and access to hospitals of the LGAs in Victoria
+
+Jupyter Notebook: Q4_Adult_Deaths_Hospitals_Access.ipynb
 
 Data Sources:
 
@@ -222,7 +232,14 @@ Conclusion of Research Question 4:
     With the correlations calculated/plotted for the relationship between hospitals in close proximity (<25km) to LGAs vs. age-standardised deaths (per 100,000), yearly (2016 - 2020) and the average across those years, it can be concluded with a high degree of certainty that an inverse relationship exists. In other words, as the number of hospitals in close access increases, the number of deaths in the population (per 100,000) decreases.
 
 # Research Question 5 (Shelly Wong, Shrushti Shah):
+
 Identify the areas where healthcare services are lacking and therefore a need for healthcare services exists.
+
+Jupyter Notebooks:
+    Q5a_aged populated.ipynb
+    Q5b_Hospital beds.ipynb
+    Q5c_Hospital mapping and analysis.ipynb
+    Q5d_BawBaw and Whittlesea analysis.ipynb
 
 Few considerations to made:
      - Considering 2 types of aged groups that need hospitals the most, this is the growing family population looking at the from age 0 to 4 years old, and services needed aged group above 70 years old age.
