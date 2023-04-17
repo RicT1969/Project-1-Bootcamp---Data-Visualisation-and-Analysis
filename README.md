@@ -7,7 +7,15 @@ Exploring and identifying potential healthcare holes in Victoria
 
 # Project Description:
 This project investigates the relationship between the growing Victorian population and the various health services available to its people. Access to tertiary and primary healthcare facilities are considered and corresponding health outcomes and mortality rates are explored. 
-The focus of this project is Victoria, Australia and the datasets analysed are from the years 2016 - 2022. Major sources of the datasets are the Australian Bureau of Statistics (ABS) and the Australian Institute of Health and Welfare (AIHW). Additionally, GeoAPIfy is used for querying geo-coordinates of the various hospitals and Local Government Areas (LAGs) for the analysis.
+
+The focus of this project is Victoria, Australia and the datasets analysed are from the years 2016 - 2022. 
+
+Major sources of the datasets:
+
+     - Australian Bureau of Statistics (ABS) 
+     - The Australian Institute of Health and Welfare (AIHW)
+     - GeoAPIfy is used for querying geo-coordinates of the various hospitals and Local Government Areas (LAGs) for the analysis.
+     
 
 # GitHub:
 https://github.com/j13s3/Group3_Project1_DataAnalytics
@@ -16,7 +24,7 @@ https://github.com/j13s3/Group3_Project1_DataAnalytics
 Identify areas of population growth in Victoria and understand the health services available to the areas
 
 Data Sources:
-Regional population 2021 from abs
+Regional population 2021 from ABS
 
 References:
 https://www.shanelynn.ie/pandas-drop-delete-dataframe-rows-columns/
@@ -29,8 +37,10 @@ https://www.geeksforgeeks.org/bar-plot-in-matplotlib/
 
      - Process raw data, by getting rid of all unwanted information, and select population data from only 2016 to 2021.
      - Then, calculating the growth of population within these 5 years by subtracting population 2021 to 2016.
-     - The data is then sorted according to the biggest growth cities (in terms of local government area (LGA)) to the lowest growth cities.
-     - In our study, we will only be looking for the Top 14th most growing cities in the whole Victoria. This is to ensure melbourne suburbs, metropolitan CBD, and regional areas are mostly included in the studies.
+     - The data is then sorted according to the biggest growth cities 
+     (in terms of local government area (LGA)) to the lowest growth cities.
+     - In our study, we will only be looking for the Top 14th most growing cities in the whole Victoria. 
+     This is to ensure melbourne suburbs, metropolitan CBD, and regional areas are mostly included in the studies.
 
     Step 2:
 
@@ -40,6 +50,8 @@ https://www.geeksforgeeks.org/bar-plot-in-matplotlib/
     Step 3:
      - After narrowing the cities data, next is to search for nearest health facilities in the proximity.
      - Using Geoapify method to identify nearest hospitals and pharmacies in the research LGAs. 
+     - By just using LGA names as parameter as text, there will be error for some cities, as there are names overlapping with other States in Australia
+     - Hence, Prefixes of "City" is included in our URL so it would give "City of (LGA names), Australia" as text parameter used.    
 
     Step 4:
      - Obtaining the health facilities distance from JSON format file from geoapify, horizontal bar plot is then used to depict how far is the nearest hospital and pharmacy for each cities. 
@@ -56,7 +68,7 @@ https://www.geeksforgeeks.org/bar-plot-in-matplotlib/
 <li>General Practice Workforce providing Primary Care services in Australia Information, Dept of Health and Aged Care (Australian Federal Government):
 https://hwd.health.gov.au/resources/data/dataset-gp-financial-years-201516-to-202122.xlsx</li>
 <li>Medicare Benefits Schedule GP and specialist attendances and expenditure 2010-11 to 2016–17 Medicare Benefits Schedule (MBS) data collection, Australian Institue for Health and Welfare: https://www.aihw.gov.au/reports-data/health-welfare-overview/health-welfare-expenditure/data</li>
-<li>Population grouth (Estimated Resident Population) by the ABS: https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/sep-2022</li>
+<li>Population growth (Estimated Resident Population) by the ABS: https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/sep-2022</li>
 <li>MyHospitals mapping details: https://www.aihw.gov.au/reports-data/myhospitals/content/data-downloads</li></ul></p>
 
 <p>Step 1: Processing data and cleaning.<p><ul>
@@ -213,8 +225,11 @@ Conclusion of Research Question 4:
     With the correlations calculated/plotted for the relationship between hospitals in close proximity (<25km) to LGAs vs. age-standardised deaths (per 100,000), yearly (2016 - 2020) and the average across those years, it can be concluded with a high degree of certainty that an inverse relationship exists. In other words, as the number of hospitals in close access increases, the number of deaths in the population (per 100,000) decreases.
 
 # Research Question 5 (Shelly Wong, Shrushti Shah):
-Identify the areas where healthcare services are lacking and therefore a need for healthcare services exists, especially for population 
-dense Victorians family growing population looking at the age 0 to 4 years old, and services needed aged group above 70 years old age.
+Identify the areas where healthcare services are lacking and therefore a need for healthcare services exists.
+
+Few considerations to made:
+     - Considering 2 types of aged groups that need hospitals the most, this is the growing family population looking at the from age 0 to 4 years old, and services needed aged group above 70 years old age.
+     - Considering the size of hospital if expansion is needed, by looking at their hospital beds
 
 Source:
 MyHospitals mapping details: https://www.aihw.gov.au/reports-data/myhospitals/content/data-downloads
@@ -224,11 +239,11 @@ Hospital resources 2020–21 data tables: https://www.aihw.gov.au/reports-data/m
 References:
 https://berkeley-stat159-f17.github.io/stat159-f17/lectures/10-matplotlib_beyond_basics/image_tutorial..html
 
-This Question is divided into 3 sections:
+This Question is divided into 4 sections:
 
 Question 5a: 
 
-    Identify aged group population for 0-4 years old and above 70 years old population across top 14th growing LGAs.
+Identify aged group population for 0-4 years old and above 70 years old population across top 14th growing LGAs.
 
     Step 1: Process raw data, and only select aged group 0-4 years old, and all aged group above 70s for the respective 14th LGAs (defined in Q1)
 
@@ -242,32 +257,47 @@ Question 5b:
 
 Identify Hospital size by considering their hospital beds
 
-    References for hospital size vs beds definition(city): https://www.rasmussen.edu/degrees/health-sciences/blog/types-of-hospitals/
+   References for hospital size vs beds definition(city): https://www.rasmussen.edu/degrees/health-sciences/blog/types-of-hospitals/
 
      - Small hospitals: fewer than 100 beds
      - Medium hospitals: between 100 to 499 beds
      - Large hospitals:  500 or more beds
 
-    References for hospital size vs beds definition(rural)
+   References for hospital size vs beds definition(rural)
      - Hospitals size smaller, often less than 100 beds
 
      Step 1: Incooperate with hospital mapping data (process in Q5c), using geoview map to identify each studied LGA of their nearest and nearby hospitals.
 
      Step2: Select the name of the main hospital of each LGAs from geoview map, manually filter the name of the hospital into the data and create new dataframe. 
+     
+     Step 3: Also checking hospital local network health data to ensure these hospitals have any links to other big equipped hospitals in the municipality. 
 
      Step 3: In combination with the use of Google map to identify travel time needed for further analysis. 
      
-     Step 4: Categorised hospitals by regional and major cities into 2 different dataframe for further analysis. 
+     Step 4: Categorised hospitals by regional and major cities into 2 different dataframe.
+     
+     Step 5: Plot bar graph to visualise the number of hospital beds for each cities, and identify city concerns with hospital beds below 250. 
+     
+Question 5d:
 
- Question 5c: 
+Further analysis made on City of Bawbaw and Whittlesea (from Q5c step 4)
+
+    Step 1: Both Baw Baw and Whittlesea shown no closest hospitals nearby, by observing hospital mapping data processed in Q5c, it is found out that the geocoordinates points given were located surrounding nature reserve. Hence, addresses of local shire council is used as the main city reference point that depicts most population located.
+
+    Step 2: Then the geocoordinates of local shire are used to find the nearest hospitals in the municipality.
+
+    Step 3: Geoview map is also used to identify location of population vs hospitals locations.
+
+
+Question 5c: 
  
-     Combine all data and make final analysis.
+ Combine all data and make final analysis.
 
      Step 1: Process raw data of the hospital mapping. This data has all the public hospitals in whole Australia, only select Victoria.
 
      Step 2: Using the provided geocoordinates given, plot data using hvplot to identify hospitals location across victoria map. 
 
-     Step 3: Import data from Q5a (aged group bar graph), and Q5b(hospital beds dataframe), combine all these dats to be used into analysis
+     Step 3: Import data from Q5a (aged group bar graph) and Q5b(hospital beds barplots), combine all these data to be used into analysis
 
      Step 4 :LGA studied derived from analysis in Q1 and Q5a
       - Cities with no hospital found: BawBaw and Whittlesea
@@ -275,15 +305,17 @@ Identify Hospital size by considering their hospital beds
       - Cities with longest hospital distance to reach: Mitchell, Hume and Cardinia 
       - Top populated cities: Casey, Melton
 
-     Step 5: Analysis made
+   Step 5: Final analysis
 
-     City with no concern for health facilites: 
+ City with no concern for health facilites: 
 
-      - Baw Baw and Whittlesea both have geocoordinates error that do not depicts its location with respect to the population area. Geocoordinates given were in area of nature reserve. Hence, studies were analysed to find out where population located. Hospitals at reasonably medium sized 90 and 253 respectively at 2 most popolated towns in BawBaw are well equipped and adequate for its own population. Same for Whittlesea, its population mostly located at south where main hospital located with 461 beds (medium to large sized) is also adequate for its population. 
+      - The analysis made in Q5d has improved our data observations made in Q1 (distance of hospitals). However, a special study needs to make for City of Baw Baw since it is a regional area which made up of different rurals town. Hence, studies were made to identify if the rural town where shire council located represents most of its population. It is found out that most populated town is located 1hr away named Traralgon where biggest hospital in baw baw region is located. It has capacity of medium sized to 253 beds which combined with other hospitals, it is well-equiped and adequate for its own population.
+    
+    - Same for Whittlesea, most of its population located in the south. This is also where main hospital is located with 461 beds (medium to large sized) and is adequate for its own population. 
 
        - Both Bass Coast and Mornington have good number of hospitals around, well equipped large hospital also located at its main populated area. Hence, these LGAs have no major issues to handle elderly population. 
 
-     City with growing concerns for health facilities: 
+City with growing concerns for health facilities: 
 
        - Wyndham is a growing family oriented city, but it has only 1 medium sized hospital in the municipality. This is a huge concern for growing population. 
 
