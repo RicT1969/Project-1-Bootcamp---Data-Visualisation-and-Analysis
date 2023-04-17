@@ -130,13 +130,15 @@ Conclusion of section 3: Based on the three different data sets we have sighted 
 Compare the mortality rate (age-standardised adult deaths per 100,000) and access to hospitals of the LGAs in Victoria
 
 Data Sources:
-Mortality Rates by LGAs: https://www.aihw.gov.au/reports/life-expectancy-death/mort-books/contents/mort-books
-Specialised Services: https://www.aihw.gov.au/reports-data/myhospitals/content/data-downloads?search=%7B%22SearchTerm%22:%22Hospital%20services%20data%20extract%22,%22ShowRelatedTopics%22:false%7D
+
+    Mortality Rates by LGAs: https://www.aihw.gov.au/reports/life-expectancy-death/mort-books/contents/mort-books
+    Specialised Services: https://www.aihw.gov.au/reports-data/myhospitals/content/data-downloads?search=%7B%22SearchTerm%22:%22Hospital%20services%20data%20extract%22,%22ShowRelatedTopics%22:false%7D
 
 Online References:
-https://stackoverflow.com/questions/13411544/delete-a-column-from-a-pandas-dataframe
-https://www.freecodecamp.org/news/how-to-substring-a-string-in-python/
-<https://www.who.int/data/gho/indicator-metadata-registry/imr-details/78>
+
+    https://stackoverflow.com/questions/13411544/delete-a-column-from-a-pandas-dataframe
+    https://www.freecodecamp.org/news/how-to-substring-a-string-in-python/
+    <https://www.who.int/data/gho/indicator-metadata-registry/imr-details/78>
 
 Step 1:
 Read the mortality rates data from the excel file. The mortality rates excel file holds data on the various parameters to evaluate the mortality in Victoria from the years 2016 to 2020. The metrics are categorised into Local Government Areas (LGAs).
@@ -207,7 +209,8 @@ Plot a bar graph to visually show the correlation between hospitals in close pro
     As seen from the average correlation over the years, the negative value shows an inverse relationship. The magnitude of about 0.6 signifies a moderately strong relationship. In simple terms, higher access to hospital services results in fewer adult deaths per 100,000.
 
 Conclusion of Research Question 4:
-With the correlations calculated/plotted for the relationship between hospitals in close proximity (<25km) to LGAs vs. age-standardised deaths (per 100,000), yearly (2016 - 2020) and the average across those years, it can be concluded with a high degree of certainty that an inverse relationship exists. In other words, as the number of hospitals in close access increases, the number of deaths in the population (per 100,000) decreases.
+
+    With the correlations calculated/plotted for the relationship between hospitals in close proximity (<25km) to LGAs vs. age-standardised deaths (per 100,000), yearly (2016 - 2020) and the average across those years, it can be concluded with a high degree of certainty that an inverse relationship exists. In other words, as the number of hospitals in close access increases, the number of deaths in the population (per 100,000) decreases.
 
 # Research Question 5 (Shelly Wong, Shrushti Shah):
 Identify the areas where healthcare services are lacking and therefore a need for healthcare services exists, especially for population 
